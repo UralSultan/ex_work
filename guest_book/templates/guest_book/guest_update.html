@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block title %}Редактировать запись{% endblock %}
+
+{% block content %}
+    <section class="guest-form-card">
+        <h1>Редактировать запись</h1>
+        <p class="guest-form-card__description">
+            Заполните форму.
+        </p>
+
+        {% include "partial/guest_create_form.html" with button_value="Обновить" %}
+    </section>
+{% endblock %}

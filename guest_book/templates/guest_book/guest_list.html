@@ -25,12 +25,16 @@
                 <span class="guest-card__email">({{ guest.author_email }})</span>
 
                 <span class="guest-card__icons">
-                    <span title="Редактировать" aria-label="Редактировать">✎</span>
+                    <a href="{% url 'guest_update' guest.pk %}" title="Редактировать запись" aria-label="Редактировать запись">
+                        <i class="fa-solid fa-pen-to-square" aria-hidden="true"></i>
+                    </a>
+
                     <span title="Удалить" aria-label="Удалить">🗑</span>
                 </span>
             </div>
 
             <p class="guest-card__text">{{ guest.content }}</p>
+
         </article>
     {% empty %}
         <p>Записей пока нет.</p>
