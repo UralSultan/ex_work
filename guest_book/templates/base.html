@@ -1,0 +1,14 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Гостевая книга{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'guest_book/css/style.css' %}">
+</head>
+<body>
+    <main class="container">
+        {% block content %}{% endblock %}
+    </main>
+</body>
+</html>

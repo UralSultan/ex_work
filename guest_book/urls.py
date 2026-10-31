@@ -1,0 +1,8 @@
+from django.contrib import admin
+from django.urls import path
+from guest_book import views
+
+urlpatterns = [
+    path("admin/", admin.site.urls),
+    path("", views.guest_list, name="guest_list"),
+]

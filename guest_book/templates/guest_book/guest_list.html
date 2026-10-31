@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %}Записи гостей{% endblock %}
+
+{% block content %}
+    <h1>Гостевая книга</h1>
+
+    {% for guest in guests %}
+        <article class="guest-card">
+            <div class="guest-card__header">
+                <strong>{{ guest.author_name }}</strong>
+                <span class="guest-card__email">({{ guest.author_email }})</span>
+
+                <span class="guest-card__icons">
+                    <span title="Редактировать" aria-label="Редактировать">✎</span>
+                    <span title="Удалить" aria-label="Удалить">🗑</span>
+                </span>
+            </div>
+
+            <p class="guest-card__text">{{ guest.content }}</p>
+        </article>
+    {% empty %}
+        <p>Записей пока нет.</p>
+    {% endfor %}
+{% endblock %}
