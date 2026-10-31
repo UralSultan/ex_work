@@ -5,6 +5,17 @@
 {% block content %}
     <h1>Гостевая книга</h1>
 
+        <form class="search-form" method="get" action="{% url 'guest_list' %}">
+            <div class="search-form__field">
+                {{ search_form.name.label_tag }}
+                {{ search_form.name }}
+            </div>
+            <div class="search-form__actions">
+                <button class="search-button" type="submit">Найти</button>
+                <a href="{% url 'guest_list' %}" class="reset-button">Сбросить фильтр</a>
+            </div>
+        </form>
+
     {% for guest in guests %}
         <article class="guest-card">
             <div class="guest-card__header">
