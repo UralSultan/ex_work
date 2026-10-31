@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block title %}Удалить запись{% endblock %}
+
+{% block content %}
+    <section class="guest-form-card">
+        <h1>Удалить запись?</h1>
+
+        <p class="guest-form-card__description">
+            Запись гостя <strong>{{ guest.author_name }}</strong> ({{ guest.author_email }}) будет удалена.
+            Для подтверждения введите почту этой записи.
+        </p>
+
+        <form method="post" action="{% url 'guest_delete' guest.pk %}" class="guest-form">
+            {% csrf_token %}
+
+            <div class="guest-form__field">
+                <label for="email">Почта записи</label>
+                <input type="email" id="email" name="email" value="{{ entered_email }}" placeholder="Введите почту, указанную в записи"
+                    autocomplete="email" required>
+                {% if error %}
+                    <p class="form-error">{{ error }}</p>
+                {% endif %}
+            </div>
+            <div class="guest-form__actions">
+                <button type="submit" class="delete-button">Удалить запись</button>
+                <a href="{% url 'guest_list' %}" class="back-button"> Отмена </a>
+            </div>
+        </form>
+    </section>
+{% endblock %}

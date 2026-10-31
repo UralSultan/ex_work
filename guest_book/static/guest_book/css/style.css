@@ -292,3 +292,27 @@ h1 {
 .guest-card__icons a:hover {
     color: #44849e;
 }
+
+.delete-button {
+    display: inline-block;
+    padding: 9px 13px;
+    border: 1px solid #b42318;
+    border-radius: 6px;
+    color: #fff;
+    background: #b42318;
+    font: inherit;
+    cursor: pointer;
+}
+
+.delete-button:hover {
+    background: #912018;
+}
+
+.guest-card__icons a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.guest-card__icons a:hover {
+    color: #44849e;
+}

@@ -29,7 +29,9 @@
                         <i class="fa-solid fa-pen-to-square" aria-hidden="true"></i>
                     </a>
 
-                    <span title="Удалить" aria-label="Удалить">🗑</span>
+                    <a href="{% url 'guest_delete' guest.pk %}" title="Удалить запись" aria-label="Удалить запись">
+                        <i class="fa-solid fa-trash-can" aria-hidden="true"></i>
+                    </a>
                 </span>
             </div>
 

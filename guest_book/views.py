@@ -52,3 +52,20 @@ def guest_update(request, pk):
             return HttpResponseRedirect(reverse('guest_list'))
         else:
             return render(request, 'guest_book/guest_update.html', {'guest': guest, 'form': form})
+
+
+def guest_delete(request, pk):
+    guest = get_object_or_404(Guestbook, pk=pk)
+    error = None
+    entered_email = ""
+    if request.method == "POST":
+        entered_email = request.POST.get("email", "").strip()
+        if entered_email.casefold() == guest.author_email.strip().casefold():
+            guest.delete()
+            return redirect("guest_list")
+        error = "Почта не совпадает с почтой записи."
+    return render(request, "guest_book/guest_delete.html", {
+        "guest": guest,
+        "error": error,
+        "entered_email": entered_email,
+    })
