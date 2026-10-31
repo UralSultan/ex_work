@@ -1,0 +1,23 @@
+<form method="post" class="guest-form">
+    {% csrf_token %}
+
+    {% if form.non_field_errors %}
+        <div class="form-error">{{ form.non_field_errors }}</div>
+    {% endif %}
+
+    {% for field in form %}
+        <div class="guest-form__field">
+            <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+            {{ field }}
+
+            {% for error in field.errors %}
+                <p class="form-error">{{ error }}</p>
+            {% endfor %}
+        </div>
+    {% endfor %}
+
+    <div class="guest-form__actions">
+        <button type="submit" class="add-button">{{ button_value }}</button>
+        <a href="{% url 'guest_list' %}" class="back-button">Вернуться к списку</a>
+    </div>
+</form>

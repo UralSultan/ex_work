@@ -5,6 +5,8 @@
 {% block content %}
     <h1>Гостевая книга</h1>
 
+        <p><a href="{% url 'guest_add' %}" class="add-button">Добавить запись</a></p>
+
         <form class="search-form" method="get" action="{% url 'guest_list' %}">
             <div class="search-form__field">
                 {{ search_form.name.label_tag }}

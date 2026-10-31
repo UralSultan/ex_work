@@ -181,3 +181,105 @@ h1 {
         width: 100%;
     }
 }
+
+.add-button,
+.reset-button {
+    display: inline-block;
+    padding: 9px 13px;
+    border: 1px solid #579bb5;
+    border-radius: 6px;
+    font: inherit;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.add-button {
+    color: #fff;
+    background: #579bb5;
+}
+
+.add-button:hover {
+    background: #44849e;
+}
+
+.back-button {
+    display: inline-block;
+    margin-left: 8px;
+    padding: 8px 12px;
+    border: 1px solid #cbd5df;
+    border-radius: 6px;
+    color: #34495e;
+    background: #fff;
+    text-decoration: none;
+}
+
+.back-button:hover {
+    background: #f1f5f8;
+}
+.guest-form-card {
+    padding: 22px;
+    border: 1px solid #e1e8ed;
+    border-left: 4px solid #579bb5;
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0 3px 10px rgb(38 59 83 / 6%);
+}
+
+.guest-form-card h1 {
+    margin-top: 0;
+}
+
+.guest-form-card__description {
+    margin: -10px 0 22px;
+    color: #73808c;
+    line-height: 1.5;
+}
+
+.guest-form__field {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    margin-bottom: 18px;
+}
+
+.guest-form__field label {
+    color: #243b53;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.guest-form__field input,
+.guest-form__field textarea {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px 11px;
+    border: 1px solid #cbd5df;
+    border-radius: 6px;
+    color: #263238;
+    background: #fff;
+    font: inherit;
+}
+
+.guest-form__field textarea {
+    min-height: 140px;
+    resize: vertical;
+}
+
+.guest-form__field input:focus,
+.guest-form__field textarea:focus {
+    border-color: #579bb5;
+    outline: 2px solid rgb(87 155 181 / 18%);
+}
+
+.form-error {
+    margin: 0;
+    color: #b42318;
+    font-size: 14px;
+}
+
+.guest-form__actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+}
