@@ -1,0 +1,62 @@
+[
+{
+  "model": "guest_book.guestbook",
+  "pk": 1,
+  "fields": {
+    "author_name": "Султан",
+    "author_email": "sultan@gmail.com",
+    "content": "Султан, запись №1",
+    "created_at": "2026-10-31T08:34:05.606Z",
+    "updated_at": "2026-10-31T08:34:05.606Z",
+    "status": "active"
+  }
+},
+{
+  "model": "guest_book.guestbook",
+  "pk": 2,
+  "fields": {
+    "author_name": "Нурсултан",
+    "author_email": "nursultan@gmail.com",
+    "content": "Запись Нурсултан №1",
+    "created_at": "2026-10-31T08:34:30.732Z",
+    "updated_at": "2026-10-31T08:34:30.732Z",
+    "status": "active"
+  }
+},
+{
+  "model": "guest_book.guestbook",
+  "pk": 3,
+  "fields": {
+    "author_name": "Бексултан",
+    "author_email": "beksultan@gmail.com",
+    "content": "Запись №1 Бексултан",
+    "created_at": "2026-10-31T08:34:55.131Z",
+    "updated_at": "2026-10-31T08:34:55.131Z",
+    "status": "active"
+  }
+},
+{
+  "model": "guest_book.guestbook",
+  "pk": 4,
+  "fields": {
+    "author_name": "Султанбек",
+    "author_email": "sultanbek@gmail.com",
+    "content": "Султанбек Запись №1, заблокирован",
+    "created_at": "2026-10-31T08:35:18.460Z",
+    "updated_at": "2026-10-31T08:35:18.460Z",
+    "status": "blocked"
+  }
+},
+{
+  "model": "guest_book.guestbook",
+  "pk": 5,
+  "fields": {
+    "author_name": "Марат",
+    "author_email": "marat@mail.com",
+    "content": "Марат, запись №1, заблокирован",
+    "created_at": "2026-10-31T08:35:41.238Z",
+    "updated_at": "2026-10-31T08:35:41.238Z",
+    "status": "blocked"
+  }
+}
+]
